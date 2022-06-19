@@ -41,7 +41,7 @@ border-bottom: 1px solid #ECECEC;
 background-color: var(--header-background-color)
 }
 
-.logo {
+.section-header__logo {
 margin-right: 90px;
 
 font-family: 'Raleway';
@@ -52,7 +52,7 @@ text-decoration: none;
 color: var(--basic-color-text);
 }
 
-.logo-web {
+.section-header__logo-web {
 font-family: 'Raleway', sans-serif;
 font-size: 26px;
 line-height: 1.19;
@@ -60,28 +60,35 @@ letter-spacing: 0.03em;
 color: #2196F3;
 }
 
-.header-container{
+.section-header__container{
 display: flex;
 align-items: center;
 }
 
 .header-list {
-display: flex;
-list-style: none;
-align-items: center;
-margin-left: auto;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: auto;
 
 
 }
 
-.header-item {
+.contact-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-list__item {
 position: relative;
 transition-property: color;
 transition-duration: 250ms;
 }
 
 
-.header-link {
+.header-list__link {
 position: relative;
 font-family: 'Roboto', sans-serif;
 font-weight: 500;
@@ -99,17 +106,17 @@ transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-item:hover::after {
+.header-list__item:hover::after {
 opacity: 1;
 
 }
 
 
-.header-item:not(:last-child) {
+.header-list__item:not(:last-child) {
 margin-right: 50px;
 }
 
-.header-mail, .header-tel {
+.contact-list__mail, .header-tel {
 font-family: 'Roboto', sans-serif;
 font-weight: 500;
 font-size: 14px;
@@ -124,14 +131,14 @@ transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-mail {
+.contact-list__mail {
 display: flex;
 flex-direction: row-reverse;
 margin-right: 30px;
 }
 
 
-.mail-icon,
+.contact-list__icon,
 .tel-icon {
 margin-right: 10px;
 transition-property: fill;
@@ -146,17 +153,16 @@ display: flex;
 flex-direction: row-reverse;
 }
 
-.header-link:hover,
-.header-link:focus,
-.header-mail:hover,
-.header-mail:focus,
+.header-list__link:hover,
+.header-list__link:focus,
+.contact-list__mail:hover,
+.contact-list__mail:focus,
 .header-tel:hover,
 .header-tel:focus,
-.mail-icon:hover,
-.mail-icon:focus,
+.contact-list__icon:hover,
+.contact-list__icon:focus,
 .tel-icon:hover,
-.tel-icon:focus,
-.mail-icon-use:hover {
+.tel-icon:focus {
  
 color: #2196F3;
 fill: #2196F3;
@@ -167,7 +173,7 @@ outline: transparent;
 color: #2196F3;
 }
 
-.header-link.current::after {
+.header-list__link.current::after {
     position: absolute;
     left: 0;
     bottom: -39.5px;
